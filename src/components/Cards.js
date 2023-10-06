@@ -1,7 +1,7 @@
 import React from 'react'
 import './Cards.css'
 import { useState,useEffect } from 'react';
-import {ItemAdded, Itemspurchased} from '../features/CartSlice';
+import {ItemAdded} from '../features/Cartslice';
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 
@@ -22,7 +22,7 @@ const Cards = () => {
 
   useEffect(() => {
    if(pictures.length===0){
-
+      setIsEmpty(true);
    }
   }, [pictures])
   
