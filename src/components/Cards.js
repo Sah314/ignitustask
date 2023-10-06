@@ -16,7 +16,7 @@ const Cards = () => {
 
     dispatch(ItemAdded(obj));
     alert("successfully added to cart")
-console.log(obj);
+//console.log(obj);
 
   }
 

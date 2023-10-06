@@ -1,9 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-    cart:[
-
-    ],
+    cart:[],
     items:[
         {
             imgpath:"img1.png",
@@ -23,8 +21,7 @@ const initialState = {
 export const CartSlice = createSlice({
   name: 'cart',
   initialState,
-  reducers: {
-    
+  reducers: {  
     ItemAdded(state,action){
         const {imgpath,cost} = action.payload;
         let present = state.cart.find((ele)=>{
@@ -50,7 +47,6 @@ export const CartSlice = createSlice({
     }
   }
 })
-
 
 export const { ItemAdded, Itemspurchased } = CartSlice.actions
 
