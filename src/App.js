@@ -1,5 +1,5 @@
 import './App.css';
-import Cards from './components/cards';
+import Cards from './components/Cards';
 import Cart from './components/Cart';
 import {BrowserRouter as Router,Routes,Route, Link} from 'react-router-dom'
 function App() {

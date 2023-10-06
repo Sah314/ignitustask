@@ -1,7 +1,7 @@
 import React from 'react'
 import './Cards.css'
 import { useState,useEffect } from 'react';
-import {ItemAdded} from '../features/Cartslice';
+import {ItemAdded} from '../features/CartSlice';
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 
