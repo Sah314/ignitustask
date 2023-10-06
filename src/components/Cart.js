@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {Itemspurchased} from '../features/CartSlice';
+import {Itemspurchased} from '../features/Cartslice';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
