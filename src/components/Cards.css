@@ -26,3 +26,7 @@
     flex-direction: row;
     justify-content:space-between;
 }
+button{
+    background-color: #5F1DF9;
+    width: 3rem;
+}

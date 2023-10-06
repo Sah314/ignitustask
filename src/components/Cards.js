@@ -44,7 +44,6 @@ const Cards = () => {
     <div>No items to display</div>
   )
 }
-
     </div>
     </>
   )
