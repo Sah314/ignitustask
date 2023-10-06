@@ -43,7 +43,7 @@ export const CartSlice = createSlice({
     ,
     Itemspurchased(state,action){
          state.items = state.items.filter(ele=>{
-            return state.cart.some(ele2=>
+            return !state.cart.some(ele2=>
                 ele.imgpath===ele2.imgpath && ele.cost===ele2.cost)
          })
          
