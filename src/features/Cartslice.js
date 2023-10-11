@@ -5,15 +5,15 @@ const initialState = {
     items:[
         {
             imgpath:"img1.png",
-            cost:0.05
+            cost:0.0005
           },
           {
             imgpath:"img2.png",
-            cost:0.04
+            cost:0.0004
           },
           {
             imgpath:"img3.png",
-            cost:0.03
+            cost:0.0003
           }
     ]
 }
