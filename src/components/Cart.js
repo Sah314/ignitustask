@@ -53,8 +53,8 @@ const getProviderorSigner = async (needSigner = false) => {
 const tx = await transferContract.transferToOwner({value:utils.parseEther(totalcost.toString())});   
 setLoading(true);
       await tx.wait();
+      alert("items have been bought");
       setbought(true);
-    alert("items have been bought");
   };
 
   const connectWallet = async()=>{
@@ -94,6 +94,7 @@ setLoading(true);
       {
         loading && (<button disabled="disabled" className="buy-button">Loading...</button> )
       }
+      {loading && bought && (<h4>Items have been bought</h4> )}
       {!loading &&(<button onClick={handleBuyitems} className="buy-button">
         Buy items
       </button>)}
