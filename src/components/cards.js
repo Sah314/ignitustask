@@ -24,6 +24,7 @@ const Cards = () => {
    if(pictures.length===0){
       setIsEmpty(true);
    }
+   console.log(isEmpty);
   }, [pictures])
   
   return (

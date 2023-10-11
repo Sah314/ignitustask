@@ -43,6 +43,12 @@ export const CartSlice = createSlice({
             return !state.cart.some(ele2=>
                 ele.imgpath===ele2.imgpath && ele.cost===ele2.cost)
          })
+         state.cart = state.cart.filter((item) => {
+          return !action.payload.some((purchasedItem) =>
+            purchasedItem.imgpath === item.imgpath && purchasedItem.cost === item.cost
+          );
+        });
+         
          
     }
   }
