@@ -7,11 +7,14 @@ contract TransferContract is Ownable {
 
          constructor(address initialOwner) Ownable(initialOwner) {
     }
-    function transferToOwner(uint amount) external payable {
-    require(msg.value >= amount, "Insufficient Ether sent");       
-       address payable contractOwner = payable(owner());
-    contractOwner.transfer(amount);
-        
+
+    function transferToOwner() external payable {
+        address _owner  =owner();
+        uint256 amount = msg.value; 
+        require(amount > 0, "No Ether sent");
+        (bool sent, ) = payable(_owner).call{value: amount}("");
+        require(sent, "Failed to send Ether to owner");
+     
     }
 
    

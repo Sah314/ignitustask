@@ -34,7 +34,7 @@ const Cards = () => {
 {  !isEmpty  &&  (pictures.map((obj)=>(<div className='card' key={obj.imgpath}>
   <img src={obj.imgpath} alt="" className='image'/>
   <div className='buyitem'>
-<div style={{marginLeft:"3rem"}}>{obj.cost}ETH</div>
+<div style={{marginLeft:"3rem"}}>{obj.cost} ETH</div>
 <button style={{marginRight:"3rem"}} onClick={()=>handleBuy(obj)}>Buy</button>
   </div>
 </div>)
