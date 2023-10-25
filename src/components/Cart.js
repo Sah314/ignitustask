@@ -45,16 +45,16 @@ const getProviderorSigner = async (needSigner = false) => {
   }
   
   const handleBuyitems = async() => {
-    dispatch(Itemspurchased(cartitems));
     const signer = await getProviderorSigner(true);
-   // const gasPrice = await signer.getGasPrice(); // Get the gas price from the provider
+    // const gasPrice = await signer.getGasPrice(); // Get the gas price from the provider
     const transferContract = new Contract(CONTRACT_ADDRESS,abi,signer);
-   // const estimatedGasLimit = await transferContract.estimateGas.transferToOwner(costInWei);
-const tx = await transferContract.transferToOwner({value:utils.parseEther(totalcost.toString())});   
-setLoading(true);
-      await tx.wait();
-      alert("items have been bought");
-      setbought(true);
+    // const estimatedGasLimit = await transferContract.estimateGas.transferToOwner(costInWei);
+    const tx = await transferContract.transferToOwner({value:utils.parseEther(totalcost.toString())});   
+    setLoading(true);
+    await tx.wait();
+    alert("items have been bought");
+    setbought(true);
+    dispatch(Itemspurchased(cartitems));
   };
 
   const connectWallet = async()=>{
